@@ -1,4 +1,4 @@
-# 📝 TIL (Today I Learned)
+## TIL (Today I Learned)
 
 매일 배우고 기록한 내용을 정리하는 레포입니다.  
 다양한 내용을 공부하고 기록합니다.
