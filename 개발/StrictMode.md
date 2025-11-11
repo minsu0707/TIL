@@ -1,0 +1,129 @@
+### StrictMode
+
+간단한 투두리스트를 구현하는 와중 input 값을 출력하기 위해 log를 찍어보았다.
+
+```tsx
+import { useState } from "react";
+import { Input } from "../components";
+
+export const Main = () => {
+  const [value, setValue] = useState<string>("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+    console.log(value);
+  };
+
+  return (
+    <>
+      <Input
+        text={value}
+        onchange={handleChange}
+        placeholder="할 일을 입력하세요."
+      />
+    </>
+  );
+};
+```
+
+그 결과
+
+입력: hello
+
+출력: hell
+
+→ 이렇게 되버렸따.
+
+왜 한 글자는 안나오지..?
+
+찾아보니
+
+value 라는 상태 관리 변수가 업데이트가 되지 않았던 것이였다…
+
+```tsx
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+    console.log(value);
+  };
+```
+
+- handleChange 함수 안에 log를 찍어서 그런 것…
+
+그래서 이번엔 이 함수 밖에 log를 찍어보았다.
+
+
+이번엔 잘 나오는 모습
+
+입력: hello
+
+출력: hello
+
+   hello
+
+근데 출력을 자세히 보면 흰 글씨로 hello가 하나 찍히고 그 밑에 연한 갈색의 글씨로 hello가 하나 더 찍혀있다.. 나는 log를 하나만 했는데..?
+
+그래서 이 또한 찾아봤다.
+
+범인은 바로
+
+StrictMode 였다
+
+```tsx
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
+```
+
+ 
+
+여기서 strictMode를 삭제하고 다시 log를 찍으면?
+
+흰 글씨의 hello만 출력되는 모습을 알 수 있다.
+
+근데 여기서 의아한 사실은 react를 설치하면 기본으로 main.tsx에 StrictMode가 App을 감싸고 있다
+
+그럼 왜 StrictMode가 있을까?
+
+그 이유는 바로 **의도치 않는 부작용**을 감지하기 위해서이다.
+
+의도치 않는 부작용은 어떤 것들이 있을까?
+
+- 렌더링 중에 상태 변경
+- 레거시 생명주기 함수 사용
+
+뭐 이외에도 많은데 이런 것들이 있다.
+
+뭐 그래서 StrictMode가 어떻게 부작용을 감지하냐?
+
+일단 핵심 원리는 <의도적으로 컴포넌트를 2번 렌더링해서 부작용을 드러낸다>이긴 해요
+
+StrictMode는 개발 환경에서 이렇게 동작한다
+
+1. 함수형 컴포넌트나 클래스 컴포넌트를
+    1. 처음 렌더링 → 언마운트 → 다시 렌더링하는 과정을 강제로 수행한다
+2. 이 과정을 통해, 컴포넌트가 다음을 잘 처리하는지 체크한다
+    1. 레더링 함수가 순수한지(부작용이 없어야 한다)
+    2. useEffect의 정리(clean-up) 함수가 제대로 작성됐는지
+    3. 레거시 생명주기 함수나 금지된 패턴 사용 유무 화인
+
+근데 왜 궂이 2번을 렌더링해야하는 걸까?
+
+이 질문의 답을 이해하기 위해 하나의 상황이 있다고 가정하자
+
+→ useEffect clean-up을 안한 경우
+
+```tsx
+useEffect(() => {
+  window.addEventListener('resize', onResize);
+}, []);
+```
+
+- 이 코드를 처음 실행될 땐 문제가 없어 보인다
+- 하지만 컴포넌트가 다시 마운트되면 resize 이벤트 리스너가 중복 등록돼서 두 번 호출된다
+- 즉, 한 번 실행해서는 감지가 불가능하고, 두 번 실행해야 드러나기 때문이다
