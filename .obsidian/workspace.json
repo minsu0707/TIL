@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "77aeef74f031e78c",
+        "id": "b58d777d3b60f3fc",
         "type": "tabs",
         "children": [
           {
-            "id": "e8277d25220fddcb",
+            "id": "6d344a3fffd0a1e7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "템플릿/아이디어_템플릿.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "아이디어_템플릿"
+              "title": "새 탭"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "[\"cssclasses\"]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -187,19 +183,37 @@
   "active": "bf551dcdaf157533",
   "lastOpenFiles": [
     "무제.md",
-    "obsidian-notes",
-    "템플릿/학습 노트_템플릿.md",
-    "템플릿/프로젝트_템플릿.md",
-    "템플릿/아이디어_템플릿.md",
-    "템플릿/회의록_템플릿.md",
+    "비즈니스/고객/CRM.md",
+    "언어/TypeScript/TS에서 자주 사용하는 유틸리티 타입 5가지.md",
+    "언어/TypeScript",
+    "비즈니스/이커머스/G2C.md",
+    "비즈니스/이커머스/C2C.md",
+    "비즈니스/이커머스/C2B.md",
+    "비즈니스/이커머스/B2G.md",
+    "비즈니스/이커머스/B2C.md",
+    "비즈니스/이커머스/B2B.md",
+    "비즈니스/이커머스",
+    "비즈니스/고객",
+    "무제",
+    "개발/TanStack Query/TanStack Query 기본 형태.md",
+    "개발/TanStack Query",
+    "개발/인증/OTP.md",
+    "_템플릿/학습 날짜_템플릿.md",
+    "_템플릿/학습 노트_템플릿.md",
+    "_템플릿/프로젝트_템플릿.md",
+    "개발/인증/JWT.md",
+    "개발/인증",
+    "인증",
+    "_템플릿/아이디어_템플릿.md",
+    "언어",
+    "알고리즘",
+    "비즈니스",
+    "_템플릿/회의록_템플릿.md",
     "숙제.md",
     "야르.md",
     "템플릿/템플릿 적용하기.md",
     "무제 2.md",
-    "템플릿",
-    "무제.base",
     "무제.canvas",
-    "무제 1.base",
     "2026-01-04.md",
     "환영합니다!.md"
   ]
