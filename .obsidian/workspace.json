@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b58d777d3b60f3fc",
+        "id": "4aba69c8c69e1896",
         "type": "tabs",
         "children": [
           {
-            "id": "6d344a3fffd0a1e7",
+            "id": "8224467177468e84",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -152,13 +152,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "무제.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "무제 의 개요"
+              "title": "개요"
             }
           }
         ],
