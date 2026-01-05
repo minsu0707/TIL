@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4aba69c8c69e1896",
+        "id": "8cdb93f2155e6c53",
         "type": "tabs",
         "children": [
           {
-            "id": "8224467177468e84",
+            "id": "51758a1b92960770",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "제텔카스텐 방식.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "제텔카스텐 방식"
             }
           }
         ]
@@ -179,10 +183,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bf551dcdaf157533",
+  "active": "51758a1b92960770",
   "lastOpenFiles": [
+    "_템플릿/아이디어_템플릿.md",
+    "_템플릿/프로젝트_템플릿.md",
+    "_템플릿/학습 날짜_템플릿.md",
+    "_템플릿/회의록_템플릿.md",
+    "_템플릿/학습 노트_템플릿.md",
+    "제텔카스텐 방식.md",
+    "용어",
     "README.md",
-    "무제.md",
     "비즈니스/고객/CRM.md",
     "언어/TypeScript/TS에서 자주 사용하는 유틸리티 타입 5가지.md",
     "언어/TypeScript",
@@ -194,21 +204,15 @@
     "비즈니스/이커머스/B2B.md",
     "비즈니스/이커머스",
     "비즈니스/고객",
-    "무제",
     "개발/TanStack Query/TanStack Query 기본 형태.md",
     "개발/TanStack Query",
     "개발/인증/OTP.md",
-    "_템플릿/학습 날짜_템플릿.md",
-    "_템플릿/학습 노트_템플릿.md",
-    "_템플릿/프로젝트_템플릿.md",
     "개발/인증/JWT.md",
     "개발/인증",
     "인증",
-    "_템플릿/아이디어_템플릿.md",
     "언어",
     "알고리즘",
     "비즈니스",
-    "_템플릿/회의록_템플릿.md",
     "숙제.md",
     "야르.md",
     "템플릿/템플릿 적용하기.md",
